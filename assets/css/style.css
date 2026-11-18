@@ -1,0 +1,91 @@
+/* Charte de l'application Hydro-phyto */
+:root {
+  --brand: #32404e;          /* logo, textes principaux */
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --text: #32404e;
+  --label: #4A5568;          /* stackLabelColor */
+  --muted: #718096;          /* fieldLabelColor */
+  --border: #CBD5E0;
+  --border-soft: #E2E8F0;
+  --soft: #EDF2F7;
+  --link: #185FA5;
+  --shadow: 0 1px 2.2px rgba(0,0,0,.22);
+  --todo-bg: #FEF3C7; --todo-text: #8A6E20;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand: #E2E8F0; --bg: #161c22; --surface: #1f2730; --text: #E2E8F0;
+    --label: #CBD5E0; --muted: #A0AEC0; --border: #3a4654; --border-soft: #2d3742;
+    --soft: #27313c; --link: #60A5FA; --shadow: 0 1px 3px rgba(0,0,0,.5);
+    --todo-bg: #4a3b0a; --todo-text: #ffe08a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Noto Sans", "Noto Sans Arabic", Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+header.top {
+  position: sticky; top: 0; z-index: 2; background: var(--surface);
+  border-bottom: 1px solid var(--border-soft);
+}
+.bar { max-width: 860px; margin: 0 auto; padding: 10px 16px; display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--brand); font-weight: 700; font-size: 18px; letter-spacing: .2px; text-decoration: none; }
+.brand .logo { width: 35px; height: 35px; display: block; }
+.langs { display: flex; gap: 6px; }
+.langs button {
+  font: inherit; font-size: 14px; font-weight: 600; padding: 4px 12px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--surface); color: var(--brand);
+}
+.langs button[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: var(--surface); }
+.hero { text-align: center; padding: 28px 16px 4px; }
+.hero .logo { width: 70px; height: 70px; display: block; margin: 0 auto; }
+.hero .name { display: block; margin-top: 6px; font-size: 22px; font-weight: 700; color: var(--brand); }
+main { max-width: 860px; margin: 0 auto; padding: 16px 16px 48px; }
+[data-content] { display: none; }
+html[data-lang="fr"] [data-content="fr"],
+html[data-lang="en"] [data-content="en"],
+html[data-lang="ar"] [data-content="ar"] { display: block; }
+nav.toc { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin: 8px 0 20px; }
+nav.toc a {
+  text-decoration: none; color: var(--brand); background: var(--surface);
+  border: 1px solid var(--border); padding: 6px 16px; border-radius: 8px; font-weight: 600;
+}
+section.card {
+  background: var(--surface); border-radius: 12px; box-shadow: var(--shadow);
+  padding: 8px 20px 20px; margin-bottom: 20px; scroll-margin-top: 72px;
+}
+h1 { font-size: 24px; margin: 18px 0 4px; color: var(--brand); }
+h2 { font-size: 17px; margin: 26px 0 8px; color: var(--brand); padding-bottom: 6px; border-bottom: 1px solid var(--border-soft); }
+h3 { font-size: 15px; margin: 18px 0 4px; color: var(--label); }
+p, li { color: var(--label); }
+strong { color: var(--text); }
+.meta { color: var(--muted); font-size: 14px; font-weight: 600; margin: 0 0 12px; }
+a { color: var(--link); }
+ul { padding-inline-start: 22px; }
+li { margin: 4px 0; }
+.table-wrap { overflow-x: auto; margin: 8px 0; border: 1px solid var(--border-soft); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 560px; }
+th, td { text-align: start; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--border-soft); color: var(--label); }
+tr:last-child td { border-bottom: 0; }
+th { background: var(--soft); color: var(--muted); font-weight: 600; font-size: 13px; }
+td:first-child { color: var(--text); font-weight: 600; }
+.highlight { background: var(--soft); border: 1px solid var(--border-soft); border-radius: 12px; padding: 12px 16px; margin: 12px 0; color: var(--label); }
+.todo { background: var(--todo-bg); color: var(--todo-text); padding: 0 4px; border-radius: 4px; font-weight: 600; }
+.options { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 12px 0; }
+.option { border: 1px solid var(--border); border-radius: 12px; padding: 4px 16px 12px; background: var(--surface); }
+.option h3 { margin: 12px 0 2px; color: var(--brand); font-size: 16px; }
+.option .tag { display: inline-block; font-size: 12px; font-weight: 600; color: var(--muted); background: var(--soft); border-radius: 6px; padding: 1px 8px; }
+.option dl { margin: 8px 0 0; }
+.option dt { font-size: 13px; font-weight: 600; color: var(--muted); margin-top: 10px; }
+.option dd { margin: 2px 0 0; color: var(--label); }
+.warn { border-inline-start: 3px solid var(--brand); }
+details { border-bottom: 1px solid var(--border-soft); padding: 12px 0; }
+details:last-of-type { border-bottom: 0; }
+summary { cursor: pointer; font-weight: 600; color: var(--text); }
+details p, details ul { margin: 8px 0 0; }
+footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 16px 32px; }
+footer .logo { width: 22px; height: 22px; vertical-align: middle; opacity: .7; }
+nav.toc a[aria-current="page"] { background: var(--brand); border-color: var(--brand); color: var(--surface); }
