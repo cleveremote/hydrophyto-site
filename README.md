@@ -1,14 +1,16 @@
 # hydrophyto-site
 
-Pages publiques de l'application iOS **Hydro-phyto** (CLEVERSYSTECH) : confidentialité et support.
+Site public de **CLEVERSYSTECH** (https://cleversystech.com) : page société, et pages confidentialité et support de l'application iOS **Hydro-phyto**.
 Site 100 % statique, sans build ni dépendance.
 
 ```
-index.html          accueil : liens vers les deux pages
+index.html          page société CLEVERSYSTECH : présentation, Hydro-phyto, contact, mentions légales
 privacy.html        politique de confidentialité
 support.html        support et FAQ
+app-store.html      fiche App Store FR / EN / AR (interne : noindex, non liée depuis l'accueil)
 assets/css/style.css  charte de l'app (#32404e, gris de l'app, cartes)
 assets/js/lang.js     choix de la langue FR / EN / AR (RTL pour l'arabe)
+assets/js/listing.js  fiche App Store : compteurs de caractères et boutons « Copier »
 assets/img/           logo (clair / sombre) et favicon
 ```
 
@@ -38,4 +40,5 @@ Il suffit de copier le contenu du dossier à la racine du site, en HTTPS.
 
 Quand l'app change (autorisations iOS, données, parcours de réinitialisation), modifier le texte
 **dans les trois langues** et la date « Dernière mise à jour » en haut de `privacy.html`.
+La ville du RCS (`[ville du greffe]`, surlignée en jaune) reste à renseigner dans les mentions légales de `index.html`, d'après le Kbis.
 Le délai de réponse du support (`[ex. 2 jours ouvrés]`, surligné en jaune) reste à renseigner dans `support.html`.
