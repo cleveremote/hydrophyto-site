@@ -21,8 +21,8 @@ Chaque page contient les trois langues. Ordre de choix :
 
 ## App Store Connect
 
-- **URL de la politique de confidentialité** : `https://<domaine>/privacy.html`
-- **URL d'assistance** : `https://<domaine>/support.html`
+- **URL de la politique de confidentialité** : `https://cleversystech.com/privacy.html`
+- **URL d'assistance** : `https://cleversystech.com/support.html`
 
 ## Tester en local
 
@@ -33,8 +33,11 @@ python3 -m http.server 8080
 
 ## Publier
 
-N'importe quel hébergeur de fichiers statiques convient (GitHub Pages, Netlify, S3 + CloudFront, Caddy…).
-Il suffit de copier le contenu du dossier à la racine du site, en HTTPS.
+Le site est servi par Cloudflare sur le domaine `cleversystech.com`, en HTTPS.
+Il suffit de copier le contenu du dossier à la racine du site.
+
+L'API de l'app (`api.cleversystech.com`) passe elle aussi par Cloudflare (Cloudflare Tunnel vers le relais AWS).
+Cloudflare est donc cité comme sous-traitant dans `privacy.html` : à garder à jour si l'infrastructure change.
 
 ## Mettre à jour
 

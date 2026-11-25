@@ -37,11 +37,11 @@
 
   <section class="card">
     <h1>Politique de confidentialité</h1>
-    <p class="meta">Application iOS Hydro-phyto · Dernière mise à jour : 18 novembre 2026</p>
+    <p class="meta">Application iOS Hydro-phyto · Dernière mise à jour : 25 novembre 2026</p>
 
     <div class="highlight">
       <strong>En bref :</strong> vos données restent sur <strong>votre box</strong>, installée chez vous.
-      Notre serveur relais, situé en Europe, ne conserve que des journaux techniques pendant 30 jours.
+      Notre serveur relais, situé en Europe et joignable via le réseau sécurisé de Cloudflare, ne conserve que des journaux techniques pendant 30 jours.
       L'application ne contient ni publicité, ni outil de mesure d'audience, ni suivi publicitaire, et nous ne vendons aucune donnée.
     </div>
 
@@ -88,6 +88,7 @@
     <h2>5. Destinataires</h2>
     <ul>
       <li><a href="https://aws.amazon.com/fr/privacy/" rel="noopener">Amazon Web Services (AWS)</a>, en tant que sous-traitant. AWS héberge notre serveur relais dans l'Union européenne. Ce serveur achemine les échanges entre l'application et votre box, et n'en conserve que les journaux techniques.</li>
+      <li><a href="https://www.cloudflare.com/fr-fr/privacypolicy/" rel="noopener">Cloudflare, Inc.</a>, en tant que sous-traitant. Cloudflare fournit le nom de domaine et le certificat HTTPS de notre serveur relais. Les connexions de l'application au relais passent par son réseau : Cloudflare reçoit la connexion chiffrée, puis la transmet au relais par un tunnel chiffré. Il traite pour cela votre adresse IP et le contenu des échanges, uniquement pour notre compte et sans les utiliser à d'autres fins.</li>
       <li>Les <strong>installateurs et revendeurs habilités</strong>, uniquement <strong>à votre demande</strong>, pour enquêter sur un problème technique.</li>
     </ul>
     <p>Aucune donnée n'est vendue, louée ou utilisée à des fins publicitaires. Aucun outil tiers de mesure d'audience ou de suivi n'est intégré à l'application.</p>
@@ -97,12 +98,13 @@
     <ul>
       <li><strong>Votre box</strong> conserve vos données personnelles et toutes les données que vous définissez dans l'application. Vous pouvez l'installer partout dans le monde : vos données restent dans le pays où elle se trouve.</li>
       <li><strong>Notre serveur relais</strong>, hébergé par AWS dans l'Union européenne, sert uniquement de routeur entre l'application et votre box. Il ne stocke aucune donnée de la box. Il ne garde que les journaux techniques, pendant 30 jours.</li>
+      <li><strong>Le réseau Cloudflare</strong> reçoit les connexions de l'application au relais dans son centre de données le plus proche de vous, qui peut se trouver hors de l'Union européenne. Il les achemine jusqu'au relais sans stocker aucune donnée de la box.</li>
     </ul>
-    <p>AWS appartient à un groupe américain. Si des données devaient être transférées vers les États-Unis, ce transfert serait encadré par le Data Privacy Framework UE–États-Unis, auquel Amazon est certifié, et par les clauses contractuelles types de la Commission européenne.</p>
+    <p>AWS et Cloudflare sont des groupes américains. Si des données devaient être transférées hors de l'Union européenne, notamment vers les États-Unis, ce transfert serait encadré par le Data Privacy Framework UE–États-Unis, auquel Amazon et Cloudflare sont certifiés, et par les clauses contractuelles types de la Commission européenne.</p>
 
     <h2>7. Sécurité</h2>
     <ul>
-      <li>Toutes les communications sont chiffrées en HTTPS/TLS, y compris avec la box sur votre réseau local, grâce à un certificat dédié.</li>
+      <li>Toutes les communications sont chiffrées en HTTPS/TLS. À distance, la connexion est chiffrée jusqu'au réseau Cloudflare, puis par un tunnel chiffré jusqu'au relais, qui n'expose aucun port sur Internet. Sur votre réseau local, la connexion avec la box est chiffrée grâce à un certificat dédié.</li>
       <li>Les identifiants et les jetons de session sont stockés dans le trousseau iOS chiffré.</li>
       <li>Les données de la box restent sur la box et ne sont pas centralisées. Le serveur relais ne fait que les acheminer.</li>
     </ul>
@@ -165,11 +167,11 @@
 
   <section class="card">
     <h1>Privacy Policy</h1>
-    <p class="meta">Hydro-phyto iOS app · Last updated: November 18, 2026</p>
+    <p class="meta">Hydro-phyto iOS app · Last updated: November 25, 2026</p>
 
     <div class="highlight">
       <strong>In short:</strong> your data stays on <strong>your box</strong>, installed at your home.
-      Our relay server, located in Europe, only keeps technical logs for 30 days.
+      Our relay server, located in Europe and reached through Cloudflare's secure network, only keeps technical logs for 30 days.
       The app has no ads, no analytics and no ad tracking, and we never sell data.
     </div>
 
@@ -216,6 +218,7 @@
     <h2>5. Recipients</h2>
     <ul>
       <li><a href="https://aws.amazon.com/privacy/" rel="noopener">Amazon Web Services (AWS)</a>, as a processor. AWS hosts our relay server in the European Union. This server routes traffic between the app and your box, and keeps only the technical logs.</li>
+      <li><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare, Inc.</a>, as a processor. Cloudflare provides the domain name and the HTTPS certificate of our relay server. The app's connections to the relay go through its network: Cloudflare receives the encrypted connection, then forwards it to the relay through an encrypted tunnel. To do so it processes your IP address and the traffic content, only on our behalf and for no other purpose.</li>
       <li><strong>Authorized installers and resellers</strong>, only <strong>at your request</strong>, to investigate a technical issue.</li>
     </ul>
     <p>No data is sold, rented or used for advertising. The app includes no third-party analytics or tracking tools.</p>
@@ -225,12 +228,13 @@
     <ul>
       <li><strong>Your box</strong> holds your personal data and all the data you define in the app. You can install it anywhere in the world: your data stays in the country where the box is.</li>
       <li><strong>Our relay server</strong>, hosted by AWS in the European Union, only acts as a router between the app and your box. It stores no box data. It keeps only technical logs, for 30 days.</li>
+      <li><strong>Cloudflare's network</strong> receives the app's connections to the relay in its data center closest to you, which may be outside the European Union. It routes them to the relay without storing any box data.</li>
     </ul>
-    <p>AWS belongs to a US group. If any data were transferred to the United States, the transfer would be covered by the EU–US Data Privacy Framework, under which Amazon is certified, and by the European Commission's standard contractual clauses.</p>
+    <p>AWS and Cloudflare are US groups. If any data were transferred outside the European Union, in particular to the United States, the transfer would be covered by the EU–US Data Privacy Framework, under which Amazon and Cloudflare are certified, and by the European Commission's standard contractual clauses.</p>
 
     <h2>7. Security</h2>
     <ul>
-      <li>All traffic is encrypted with HTTPS/TLS, including traffic to the box on your local network, which uses a dedicated certificate.</li>
+      <li>All traffic is encrypted with HTTPS/TLS. Remotely, the connection is encrypted up to Cloudflare's network, then through an encrypted tunnel to the relay, which exposes no port to the Internet. On your local network, traffic to the box is encrypted with a dedicated certificate.</li>
       <li>Credentials and session tokens are stored in the encrypted iOS Keychain.</li>
       <li>Box data stays on the box and is not centralized. The relay server only routes it.</li>
     </ul>
@@ -293,11 +297,11 @@
 
   <section class="card">
     <h1>سياسة الخصوصية</h1>
-    <p class="meta">تطبيق Hydro-phyto على iOS · آخر تحديث: 18 نوفمبر 2026</p>
+    <p class="meta">تطبيق Hydro-phyto على iOS · آخر تحديث: 25 نوفمبر 2026</p>
 
     <div class="highlight">
       <strong>باختصار:</strong> تبقى بياناتك على <strong>صندوقك</strong> المثبّت في منزلك.
-      لا يحتفظ خادم الترحيل لدينا، الموجود في أوروبا، إلا بسجلات تقنية لمدة 30 يومًا.
+      لا يحتفظ خادم الترحيل لدينا، الموجود في أوروبا والذي يُوصَل إليه عبر شبكة Cloudflare الآمنة، إلا بسجلات تقنية لمدة 30 يومًا.
       لا يحتوي التطبيق على إعلانات ولا على أدوات لقياس الاستخدام أو للتتبّع الإعلاني، ولا نبيع أي بيانات.
     </div>
 
@@ -344,6 +348,7 @@
     <h2>5. الجهات المتلقية</h2>
     <ul>
       <li><a href="https://aws.amazon.com/privacy/" rel="noopener">Amazon Web Services (AWS)</a>، بصفتها معالجًا من الباطن. تستضيف AWS خادم الترحيل لدينا في الاتحاد الأوروبي. يمرّر هذا الخادم الاتصالات بين التطبيق وصندوقك، ولا يحتفظ إلا بالسجلات التقنية.</li>
+      <li><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare, Inc.</a>، بصفتها معالجًا من الباطن. توفّر Cloudflare اسم النطاق وشهادة HTTPS لخادم الترحيل لدينا. تمرّ اتصالات التطبيق بالخادم عبر شبكتها: تستقبل Cloudflare الاتصال المشفّر، ثم تنقله إلى الخادم عبر نفق مشفّر. ولهذا الغرض تعالج عنوان IP الخاص بك ومحتوى الاتصالات، لحسابنا فقط ودون استخدامها لأي غرض آخر.</li>
       <li><strong>المركّبون والموزّعون المعتمدون</strong>، <strong>بناءً على طلبك</strong> فقط، للتحقيق في مشكلة تقنية.</li>
     </ul>
     <p>لا تُباع أي بيانات ولا تُؤجَّر ولا تُستخدم لأغراض إعلانية. ولا يتضمّن التطبيق أي أدوات خارجية لقياس الاستخدام أو للتتبّع.</p>
@@ -353,12 +358,13 @@
     <ul>
       <li><strong>صندوقك</strong> يحتفظ ببياناتك الشخصية وبكل البيانات التي تحدّدها في التطبيق. يمكنك تثبيته في أي مكان في العالم، وتبقى بياناتك في البلد الذي يوجد فيه الصندوق.</li>
       <li><strong>خادم الترحيل لدينا</strong>، الذي تستضيفه AWS في الاتحاد الأوروبي، يعمل كموجّه فقط بين التطبيق وصندوقك. لا يخزّن أي بيانات من الصندوق، ولا يحتفظ إلا بالسجلات التقنية لمدة 30 يومًا.</li>
+      <li><strong>شبكة Cloudflare</strong> تستقبل اتصالات التطبيق بالخادم في أقرب مركز بيانات إليك، وقد يقع خارج الاتحاد الأوروبي. وتنقلها إلى الخادم دون تخزين أي بيانات من الصندوق.</li>
     </ul>
-    <p>تنتمي AWS إلى مجموعة أمريكية. وفي حال نقل أي بيانات إلى الولايات المتحدة، يخضع هذا النقل لإطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة، الذي تحمل Amazon شهادته، وللبنود التعاقدية النموذجية للمفوضية الأوروبية.</p>
+    <p>تنتمي AWS وCloudflare إلى مجموعتين أمريكيتين. وفي حال نقل أي بيانات خارج الاتحاد الأوروبي، ولا سيما إلى الولايات المتحدة، يخضع هذا النقل لإطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة، الذي تحمل Amazon وCloudflare شهادته، وللبنود التعاقدية النموذجية للمفوضية الأوروبية.</p>
 
     <h2>7. الأمان</h2>
     <ul>
-      <li>جميع الاتصالات مشفّرة عبر HTTPS/TLS، بما فيها الاتصال بالصندوق على شبكتك المحلية، بفضل شهادة مخصّصة.</li>
+      <li>جميع الاتصالات مشفّرة عبر HTTPS/TLS. عن بُعد، يكون الاتصال مشفّرًا حتى شبكة Cloudflare، ثم عبر نفق مشفّر حتى خادم الترحيل، الذي لا يفتح أي منفذ على الإنترنت. وعلى شبكتك المحلية، يُشفَّر الاتصال بالصندوق بفضل شهادة مخصّصة.</li>
       <li>تُخزَّن بيانات الدخول ورموز الجلسة في سلسلة مفاتيح iOS المشفّرة.</li>
       <li>تبقى بيانات الصندوق على الصندوق ولا تُجمع مركزيًا، ويقتصر دور خادم الترحيل على تمريرها.</li>
     </ul>

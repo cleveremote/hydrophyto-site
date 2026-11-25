@@ -42,7 +42,7 @@
 
   <section class="card" id="fr-general">
     <h1>Fiche App Store</h1>
-    <p class="meta">Version 1.0.0 · mise à jour le 18 nov. 2026 · les champs <span class="todo">surlignés</span> restent à compléter</p>
+    <p class="meta">Version 1.0.0 · mise à jour le 25 nov. 2026 · les champs <span class="todo">surlignés</span> restent à compléter</p>
     <p>HYDRO-PHYTO est publiée gratuitement en français, en anglais et en arabe, dans <strong>Productivité</strong> (principale) et <strong>Utilitaires</strong> (secondaire). Le slogan « Control smarter, grow better! » sert au texte promotionnel et aux légendes des captures, pas au sous-titre : le sous-titre est indexé par la recherche, il porte donc des mots-clés. Cette page montre la fiche française ; changez de langue en haut pour les fiches anglaise et arabe.</p>
 
     <h2>Informations générales</h2>
@@ -63,7 +63,7 @@
         <tr><td>URL d'assistance</td><td>https://<span class="todo">[domaine]</span>/support.html</td></tr>
         <tr><td>URL marketing</td><td>https://<span class="todo">[domaine]</span>/</td></tr>
         <tr><td>URL de confidentialité</td><td>https://<span class="todo">[domaine]</span>/privacy.html</td></tr>
-        <tr><td>Chiffrement (export)</td><td>HTTPS/TLS standard uniquement, donc exempté. Ajouter <code>ITSAppUsesNonExemptEncryption = NO</code> à l'Info.plist pour ne plus répondre à la question à chaque build.</td></tr>
+        <tr><td>Chiffrement (export)</td><td>HTTPS/TLS standard uniquement (certificat Cloudflare côté Internet), donc exempté. Ajouter <code>ITSAppUsesNonExemptEncryption = NO</code> à l'Info.plist pour ne plus répondre à la question à chaque build.</td></tr>
       </tbody>
     </table></div>
 
@@ -148,7 +148,7 @@ Control smarter, grow better!</div></div>
       <li><strong>Coordonnées › Adresse e-mail :</strong> e-mail de récupération du mot de passe.</li>
       <li><strong>Identifiants › Identifiant d'utilisateur :</strong> identifiant fixe de la box, qui sert aussi de login du compte. Ne pas cocher en plus « Identifiant de l'appareil » : c'est la même valeur.</li>
       <li><strong>Localisation › Position précise :</strong> coordonnées GPS envoyées à la box (lieu d'installation, lever et coucher du soleil).</li>
-      <li><strong>Autres données › Autres types de données :</strong> adresse IP conservée 30 jours dans les journaux du relais (sécurité, diagnostic).</li>
+      <li><strong>Autres données › Autres types de données :</strong> adresse IP conservée 30 jours dans les journaux du relais (sécurité, diagnostic). Cloudflare, qui sert le domaine du relais en HTTPS, traite aussi l'IP, mais en tant que sous-traitant pour notre compte : ce n'est ni un nouveau type de donnée ni du suivi. L'étiquette et <code>PrivacyInfo.xcprivacy</code> ne changent pas.</li>
     </ul>
   </section>
 
@@ -172,6 +172,8 @@ Password: [...]
 
 The first-time setup (scanning the QR code on the box and joining its Wi-Fi) needs physical access to a box, so it is shown in this video: [link]
 
+Network: the app reaches our relay at https://api.cleversystech.com, served through Cloudflare (standard HTTPS, then a Cloudflare Tunnel to our relay hosted on AWS in the EU). On the local network it talks to the box directly over HTTPS with the box's own certificate.
+
 Permissions: camera (QR code), local network (box discovery), location while in use (box location for sunrise/sunset times), Face ID (saved credentials).</div></div>
   </section>
 </div>
@@ -188,7 +190,7 @@ Permissions: camera (QR code), local network (box discovery), location while in 
 
   <section class="card" id="en-general">
     <h1>App Store listing</h1>
-    <p class="meta">Version 1.0.0 · updated 18 Nov 2026 · <span class="todo">highlighted</span> fields still need filling in</p>
+    <p class="meta">Version 1.0.0 · updated 25 Nov 2026 · <span class="todo">highlighted</span> fields still need filling in</p>
     <p>HYDRO-PHYTO ships free in French, English and Arabic, in <strong>Productivity</strong> (primary) and <strong>Utilities</strong> (secondary). The tagline "Control smarter, grow better!" is used for the promotional text and screenshot captions, not the subtitle: the subtitle is indexed by search, so it carries keywords. This page shows the English listing; switch language at the top for the French and Arabic ones.</p>
 
     <h2>General information</h2>
@@ -209,7 +211,7 @@ Permissions: camera (QR code), local network (box discovery), location while in 
         <tr><td>Support URL</td><td>https://<span class="todo">[domain]</span>/support.html</td></tr>
         <tr><td>Marketing URL</td><td>https://<span class="todo">[domain]</span>/</td></tr>
         <tr><td>Privacy policy URL</td><td>https://<span class="todo">[domain]</span>/privacy.html</td></tr>
-        <tr><td>Encryption (export)</td><td>Standard HTTPS/TLS only, so exempt. Add <code>ITSAppUsesNonExemptEncryption = NO</code> to Info.plist to stop answering the question on every build.</td></tr>
+        <tr><td>Encryption (export)</td><td>Standard HTTPS/TLS only (Cloudflare certificate on the Internet side), so exempt. Add <code>ITSAppUsesNonExemptEncryption = NO</code> to Info.plist to stop answering the question on every build.</td></tr>
       </tbody>
     </table></div>
 
@@ -294,7 +296,7 @@ Control smarter, grow better!</div></div>
       <li><strong>Contact Info › Email Address:</strong> password recovery email.</li>
       <li><strong>Identifiers › User ID:</strong> the box's fixed identifier, which is also the account login. Do not also tick "Device ID": it is the same value.</li>
       <li><strong>Location › Precise Location:</strong> GPS coordinates sent to the box (installation site, sunrise and sunset).</li>
-      <li><strong>Other Data › Other Data Types:</strong> IP address kept for 30 days in the relay logs (security, troubleshooting).</li>
+      <li><strong>Other Data › Other Data Types:</strong> IP address kept for 30 days in the relay logs (security, troubleshooting). Cloudflare, which serves the relay's domain over HTTPS, also processes the IP, but as a processor acting on our behalf: it is neither a new data type nor tracking. The label and <code>PrivacyInfo.xcprivacy</code> stay the same.</li>
     </ul>
   </section>
 
@@ -318,6 +320,8 @@ Password: [...]
 
 The first-time setup (scanning the QR code on the box and joining its Wi-Fi) needs physical access to a box, so it is shown in this video: [link]
 
+Network: the app reaches our relay at https://api.cleversystech.com, served through Cloudflare (standard HTTPS, then a Cloudflare Tunnel to our relay hosted on AWS in the EU). On the local network it talks to the box directly over HTTPS with the box's own certificate.
+
 Permissions: camera (QR code), local network (box discovery), location while in use (box location for sunrise/sunset times), Face ID (saved credentials).</div></div>
   </section>
 </div>
@@ -334,7 +338,7 @@ Permissions: camera (QR code), local network (box discovery), location while in 
 
   <section class="card" id="ar-general">
     <h1>بطاقة App Store</h1>
-    <p class="meta">الإصدار 1.0.0 · آخر تحديث 18 نوفمبر 2026 · الحقول <span class="todo">المظلّلة</span> لم تُستكمل بعد</p>
+    <p class="meta">الإصدار 1.0.0 · آخر تحديث 25 نوفمبر 2026 · الحقول <span class="todo">المظلّلة</span> لم تُستكمل بعد</p>
     <p>يُنشر HYDRO-PHYTO مجانًا بالفرنسية والإنجليزية والعربية، في فئة <strong>الإنتاجية</strong> (رئيسية) و<strong>الأدوات</strong> (ثانوية). يُستخدم الشعار «Control smarter, grow better!» في النص الترويجي وتعليقات لقطات الشاشة، لا في العنوان الفرعي: فالعنوان الفرعي يُفهرَس في البحث، لذا يحمل كلمات مفتاحية. تعرض هذه الصفحة البطاقة العربية؛ غيّر اللغة في الأعلى لعرض البطاقتين الفرنسية والإنجليزية.</p>
 
     <h2>معلومات عامة</h2>
@@ -355,7 +359,7 @@ Permissions: camera (QR code), local network (box discovery), location while in 
         <tr><td>رابط الدعم</td><td dir="ltr">https://<span class="todo">[domain]</span>/support.html</td></tr>
         <tr><td>رابط التسويق</td><td dir="ltr">https://<span class="todo">[domain]</span>/</td></tr>
         <tr><td>رابط سياسة الخصوصية</td><td dir="ltr">https://<span class="todo">[domain]</span>/privacy.html</td></tr>
-        <tr><td>التشفير (التصدير)</td><td>HTTPS/TLS القياسي فقط، فالتطبيق مُعفى. أضف <code dir="ltr">ITSAppUsesNonExemptEncryption = NO</code> إلى Info.plist كي لا يُطرح السؤال مع كل بناء.</td></tr>
+        <tr><td>التشفير (التصدير)</td><td>HTTPS/TLS القياسي فقط (شهادة Cloudflare من جهة الإنترنت)، فالتطبيق مُعفى. أضف <code dir="ltr">ITSAppUsesNonExemptEncryption = NO</code> إلى Info.plist كي لا يُطرح السؤال مع كل بناء.</td></tr>
       </tbody>
     </table></div>
 
@@ -440,7 +444,7 @@ Control smarter, grow better!</div></div>
       <li><strong>معلومات الاتصال › عنوان البريد الإلكتروني:</strong> البريد الإلكتروني لاسترداد كلمة المرور.</li>
       <li><strong>المعرّفات › معرّف المستخدم:</strong> المعرّف الثابت للصندوق، وهو أيضًا اسم المستخدم للحساب. لا تحدّد «معرّف الجهاز» إضافةً إليه: إنها القيمة نفسها.</li>
       <li><strong>الموقع › الموقع الدقيق:</strong> إحداثيات GPS المرسلة إلى الصندوق (مكان التثبيت، شروق الشمس وغروبها).</li>
-      <li><strong>بيانات أخرى › أنواع بيانات أخرى:</strong> عنوان IP المحفوظ 30 يومًا في سجلات الخادم الوسيط (الأمان، التشخيص).</li>
+      <li><strong>بيانات أخرى › أنواع بيانات أخرى:</strong> عنوان IP المحفوظ 30 يومًا في سجلات الخادم الوسيط (الأمان، التشخيص). تعالج Cloudflare، التي تقدّم نطاق الخادم الوسيط عبر HTTPS، عنوان IP أيضًا، لكن بصفتها معالجًا من الباطن لحسابنا: فليس ذلك نوع بيانات جديدًا ولا تتبّعًا. لا يتغيّر الملصق ولا <code dir="ltr">PrivacyInfo.xcprivacy</code>.</li>
     </ul>
   </section>
 
@@ -463,6 +467,8 @@ Login: [...]
 Password: [...]
 
 The first-time setup (scanning the QR code on the box and joining its Wi-Fi) needs physical access to a box, so it is shown in this video: [link]
+
+Network: the app reaches our relay at https://api.cleversystech.com, served through Cloudflare (standard HTTPS, then a Cloudflare Tunnel to our relay hosted on AWS in the EU). On the local network it talks to the box directly over HTTPS with the box's own certificate.
 
 Permissions: camera (QR code), local network (box discovery), location while in use (box location for sunrise/sunset times), Face ID (saved credentials).</div></div>
   </section>
