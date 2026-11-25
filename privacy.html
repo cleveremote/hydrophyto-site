@@ -73,7 +73,8 @@
     <ul>
       <li><strong>Appareil photo :</strong> sert à scanner le QR code de la box. Les images sont analysées sur l'iPhone, puis ni enregistrées ni transmises.</li>
       <li><strong>Réseau local :</strong> sert à détecter votre box sur votre Wi-Fi (Bonjour) et à communiquer directement avec elle.</li>
-      <li><strong>Localisation (« Lorsque l'app est active ») :</strong> demandée pendant la configuration de la box. Elle n'est jamais utilisée en arrière-plan.</li>
+      <li><strong>Localisation (« Lorsque l'app est active ») :</strong> demandée pendant la configuration de la box, pour deux usages : enregistrer le lieu d'installation de la box (voir ci-dessus) et lire le nom du réseau Wi-Fi auquel votre iPhone est connecté, par exemple pour vérifier qu'il est bien revenu sur votre réseau après la configuration. iOS exige cette autorisation pour donner accès au nom du Wi-Fi. Ce nom est seulement comparé sur l'iPhone : il n'est ni enregistré ni transmis. La localisation n'est jamais utilisée en arrière-plan.</li>
+      <li><strong>Connexion au Wi-Fi de la box :</strong> pendant la configuration, l'application propose de rejoindre le Wi-Fi émis par la box, avec le nom et le mot de passe lus dans son QR code. iOS vous demande votre accord à chaque fois ; sans lui, votre iPhone ne change pas de réseau. Ce réseau n'est utilisé que le temps de la configuration : iOS l'oublie ensuite et votre iPhone revient sur son Wi-Fi habituel.</li>
       <li><strong>Face ID / Touch ID :</strong> sert à déverrouiller vos identifiants mémorisés. Vos données biométriques sont gérées par iOS : ni l'application ni nous n'y avons jamais accès.</li>
     </ul>
     <p>Vous pouvez retirer chaque autorisation à tout moment dans <em>Réglages iOS › Hydro-phyto</em>. La fonction concernée ne sera alors plus disponible.</p>
@@ -81,7 +82,7 @@
     <h2>4. Bases légales (RGPD)</h2>
     <ul>
       <li><strong>Exécution du contrat</strong> (art. 6.1.b) : compte, configuration de la box, fonctionnement de l'application.</li>
-      <li><strong>Consentement</strong> (art. 6.1.a) : localisation et appareil photo. Vous le donnez via les autorisations iOS et pouvez le retirer à tout moment.</li>
+      <li><strong>Consentement</strong> (art. 6.1.a) : localisation, appareil photo et connexion au Wi-Fi de la box. Vous le donnez via les autorisations et les invites iOS, et pouvez le refuser ou le retirer à tout moment.</li>
       <li><strong>Intérêt légitime</strong> (art. 6.1.f) : journaux techniques, pour la sécurité et le diagnostic.</li>
     </ul>
 
@@ -203,7 +204,8 @@
     <ul>
       <li><strong>Camera:</strong> used to scan the QR code on the box. Images are analyzed on the iPhone and are neither saved nor sent.</li>
       <li><strong>Local network:</strong> used to find your box on your Wi-Fi (Bonjour) and talk to it directly.</li>
-      <li><strong>Location ("While Using the App"):</strong> requested while you set up the box. It is never used in the background.</li>
+      <li><strong>Location ("While Using the App"):</strong> requested while you set up the box, for two purposes: recording where the box is installed (see above), and reading the name of the Wi-Fi network your iPhone is connected to, for example to check that it is back on your network after setup. iOS requires this permission before it gives access to the Wi-Fi name. The name is only compared on the iPhone: it is neither saved nor sent. Location is never used in the background.</li>
+      <li><strong>Joining the box's Wi-Fi:</strong> during setup, the app offers to join the Wi-Fi network the box broadcasts, using the name and password read from its QR code. iOS asks for your approval every time; without it, your iPhone stays on its current network. The app uses this network only for the duration of setup: iOS then forgets it and your iPhone goes back to its usual Wi-Fi.</li>
       <li><strong>Face ID / Touch ID:</strong> used to unlock your saved credentials. Your biometric data is handled by iOS: neither the app nor we ever have access to it.</li>
     </ul>
     <p>You can turn off any permission at any time in <em>iOS Settings › Hydro-phyto</em>. The related feature will then stop working.</p>
@@ -211,7 +213,7 @@
     <h2>4. Legal bases (GDPR)</h2>
     <ul>
       <li><strong>Performance of a contract</strong> (Art. 6(1)(b)): your account, box setup and running the app.</li>
-      <li><strong>Consent</strong> (Art. 6(1)(a)): location and camera. You give it through iOS permissions and can withdraw it at any time.</li>
+      <li><strong>Consent</strong> (Art. 6(1)(a)): location, camera and joining the box's Wi-Fi. You give it through iOS permissions and prompts, and can refuse or withdraw it at any time.</li>
       <li><strong>Legitimate interest</strong> (Art. 6(1)(f)): technical logs, for security and troubleshooting.</li>
     </ul>
 
@@ -333,7 +335,8 @@
     <ul>
       <li><strong>الكاميرا:</strong> لمسح رمز QR الموجود على الصندوق. تُحلَّل الصور على جهاز iPhone، ولا تُحفظ ولا تُرسل.</li>
       <li><strong>الشبكة المحلية:</strong> لاكتشاف صندوقك على شبكة Wi-Fi لديك (Bonjour) والتواصل معه مباشرة.</li>
-      <li><strong>الموقع («أثناء استخدام التطبيق»):</strong> يُطلب أثناء إعداد الصندوق، ولا يُستخدم أبدًا في الخلفية.</li>
+      <li><strong>الموقع («أثناء استخدام التطبيق»):</strong> يُطلب أثناء إعداد الصندوق لغرضين: تسجيل مكان تثبيت الصندوق (انظر أعلاه)، وقراءة اسم شبكة Wi-Fi المتصل بها جهاز iPhone، مثلًا للتحقق من عودته إلى شبكتك بعد الإعداد. يشترط نظام iOS هذا الإذن قبل أن يتيح الوصول إلى اسم شبكة Wi-Fi. يُقارَن هذا الاسم على جهاز iPhone فقط، ولا يُحفظ ولا يُرسل. ولا يُستخدم الموقع أبدًا في الخلفية.</li>
+      <li><strong>الانضمام إلى شبكة Wi-Fi الخاصة بالصندوق:</strong> أثناء الإعداد، يقترح التطبيق الانضمام إلى شبكة Wi-Fi التي يبثّها الصندوق، باستخدام الاسم وكلمة المرور المقروءين من رمز QR الخاص به. يطلب منك نظام iOS موافقتك في كل مرة، ومن دونها لا يغيّر جهاز iPhone شبكته. لا يستخدم التطبيق هذه الشبكة إلا طوال مدة الإعداد، ثم ينساها iOS ويعود جهاز iPhone إلى شبكة Wi-Fi المعتادة.</li>
       <li><strong>Face ID / Touch ID:</strong> لفتح بيانات الدخول المحفوظة. يتولّى نظام iOS إدارة بياناتك البيومترية، ولا يصل إليها التطبيق ولا نحن أبدًا.</li>
     </ul>
     <p>يمكنك سحب أي إذن في أي وقت من <em>إعدادات iOS › Hydro-phyto</em>، وعندها تتوقف الميزة المرتبطة به عن العمل.</p>
@@ -341,7 +344,7 @@
     <h2>4. الأسس القانونية (اللائحة العامة لحماية البيانات)</h2>
     <ul>
       <li><strong>تنفيذ العقد</strong> (المادة 6.1.b): الحساب وإعداد الصندوق وتشغيل التطبيق.</li>
-      <li><strong>الموافقة</strong> (المادة 6.1.a): الموقع والكاميرا. تمنحها عبر أذونات iOS ويمكنك سحبها في أي وقت.</li>
+      <li><strong>الموافقة</strong> (المادة 6.1.a): الموقع والكاميرا والانضمام إلى شبكة Wi-Fi الخاصة بالصندوق. تمنحها عبر أذونات iOS وطلباته، ويمكنك رفضها أو سحبها في أي وقت.</li>
       <li><strong>المصلحة المشروعة</strong> (المادة 6.1.f): السجلات التقنية، لأغراض الأمان والتشخيص.</li>
     </ul>
 
