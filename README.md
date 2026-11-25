@@ -21,8 +21,8 @@ Chaque page contient les trois langues. Ordre de choix :
 
 ## App Store Connect
 
-- **URL de la politique de confidentialité** : `https://www.cleversystech.com/privacy.html`
-- **URL d'assistance** : `https://www.cleversystech.com/support.html`
+- **URL de la politique de confidentialité** : `https://www.cleversystech.com/privacy`
+- **URL d'assistance** : `https://www.cleversystech.com/support`
 
 ## Tester en local
 
