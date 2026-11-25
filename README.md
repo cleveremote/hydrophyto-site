@@ -21,8 +21,8 @@ Chaque page contient les trois langues. Ordre de choix :
 
 ## App Store Connect
 
-- **URL de la politique de confidentialité** : `https://cleversystech.com/privacy.html`
-- **URL d'assistance** : `https://cleversystech.com/support.html`
+- **URL de la politique de confidentialité** : `https://www.cleversystech.com/privacy.html`
+- **URL d'assistance** : `https://www.cleversystech.com/support.html`
 
 ## Tester en local
 
@@ -43,5 +43,3 @@ Cloudflare est donc cité comme sous-traitant dans `privacy.html` : à garder à
 
 Quand l'app change (autorisations iOS, données, parcours de réinitialisation), modifier le texte
 **dans les trois langues** et la date « Dernière mise à jour » en haut de `privacy.html`.
-La ville du RCS (`[ville du greffe]`, surlignée en jaune) reste à renseigner dans les mentions légales de `index.html`, d'après le Kbis.
-Le délai de réponse du support (`[ex. 2 jours ouvrés]`, surligné en jaune) reste à renseigner dans `support.html`.
